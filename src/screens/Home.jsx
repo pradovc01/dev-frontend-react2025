@@ -7,26 +7,29 @@ import viteLogo from '../assets/vite.svg'
 import githubLogo from '../assets/github.svg'
 const Home = () => {
     return (
-        <div>
-            <OpenLink
-                redirectUrl="https://vite.dev"
-                logoImage={viteLogo}
-                altValue="vite" />
+        <>
+            <div>
 
-            <OpenLink
-                redirectUrl="https://react.dev"
-                logoImage={reactLogo}
-                altValue="react" />
+                <OpenLink
+                    redirectUrl="https://vite.dev"
+                    logoImage={viteLogo}
+                    altValue="vite" />
 
-            <OpenLink
-                redirectUrl="https://github.com/pradovc01/dev-frontend-react2025"
-                logoImage={githubLogo}
-                altValue="github" />
+                <OpenLink
+                    redirectUrl="https://react.dev"
+                    logoImage={reactLogo}
+                    altValue="react" />
 
+                <OpenLink
+                    redirectUrl="https://github.com/pradovc01/dev-frontend-react2025"
+                    logoImage={githubLogo}
+                    altValue="github" />
 
+            </div>
             <Body></Body>
             <Footer />
-        </div>
+
+        </>
     )
 };
 export default Home;
