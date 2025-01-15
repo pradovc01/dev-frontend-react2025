@@ -1,18 +1,19 @@
 import ProductTable from "./ProductTable";
 import SearchBar from "./SearchBar";
 import React from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import { setFilterText, toggleInStockOnly } from "../../store/features/product/productSlice.js"
+import { useState } from "react";
+
 
 const FilProductTable = ({ products }) => {
+    const [filterText, setFilterText] = useState('');
+    const [inStockOnly, setInStockOnly] = useState(false);
 
-    const dispatch = useDispatch();
-    const filterText = useSelector((state) => state.productr.filterText);
-    const inStockOnly = useSelector((state) => state.productr.inStockOnly);
     return (
         <div>
             <SearchBar filterText={filterText}
-                inStockOnly={inStockOnly} />
+                inStockOnly={inStockOnly}
+                onFilterTextChange={setFilterText}
+                onInStockOnlyChange={setInStockOnly} />
             <ProductTable
                 products={products}
                 filterText={filterText}

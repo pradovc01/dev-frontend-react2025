@@ -5,7 +5,7 @@ const ProductTable = ({ products, filterText, inStockOnly }) => {
     const rows = [];
     let lastCategory = null;
     products.forEach((product) => {
-        if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) == -1) { //!filterText || 
+        if (product.name.toLowerCase().indexOf(filterText.toLowerCase()) == -1) {
             return;
 
         }

@@ -1,8 +1,8 @@
-const SearchBar = ({ filterText }, { inStockOnly }) => {
+const SearchBar = ({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange }) => {
     return (
         <form>
             <input type="text"
-                placeholder="Search"
+                placeholder="Search..."
                 value={filterText}
                 onChange={(e) => onFilterTextChange(e.target.value)}></input>
             <label>
