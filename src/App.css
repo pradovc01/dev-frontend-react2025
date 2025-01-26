@@ -63,10 +63,14 @@
   color: #5378c3;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: black;
-  margin-right: 1rem;
+.nav-logout {
+  color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold text */
+    padding: 8px 12px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
 }
 
 .modal-overlay {
@@ -83,10 +87,34 @@
 }
 
 .notification-success {
-  background-color: #efd6bd;
-  color: #cc8259;
+  background-color: #abefa1;
+  color: #090a09;
   padding: 2rem;
-  border: 1px solid #cc8259;
+  border: 1px solid #047b39;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.notification-error {
+  background-color: #ed9696;
+  color: #080707;
+  padding: 2rem;
+  border: 1px solid #d7063e;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.notification-dialog {
+  background-color: #d19b12;
+  color: #950b0b;
+  padding: 2rem;
+  border: 1px solid #d7063e;
   border-radius: 0.5rem;
   max-width: 500px;
   width: 90%;
@@ -103,4 +131,62 @@
   color: #7e4f1a;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* Logout button styles */
+.button {
+  background-color: #638de2; /* Red background */
+  color: #fff; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Spacing inside the button */
+  font-size: 16px; /* Font size for text */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #231ff9; /* Darker red for hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Active state */
+.button:active {
+  background-color: #638de2; /* Even darker red for active state */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+  transform: scale(0.98); /* Slightly shrink on click for feedback */
+}
+
+/* Focus state */
+.button:focus {
+  outline: 2px solid #638de2; /* Focus ring for accessibility */
+  outline-offset: 2px; /* Offset for better visibility */
+}
+.navbar-text {
+  color: #080808; /* White text color */
+  font-size: 12px; /* Standard text size */
+  font-weight: normal; /* Normal weight for text */
+  margin-left: auto; /* Push text to the right (optional) */
+  margin-right: 0; /* Keep alignment consistent */
+  cursor: default; /* Prevent pointer cursor to indicate non-interactivity */
+  user-select: none; /* Disable text selection for static display */
+}
+
+.green-line {
+  border: 2px solid green;
+  width: 100%;
+  margin: 10px 0;
+}
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.left-align {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
 }

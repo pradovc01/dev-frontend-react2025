@@ -9,7 +9,12 @@ const useForm = (initialState = {}) => {
         });
     };
     const resetForm = () => {
-        setFormData(initialState);
+        setFormData({
+            username: '',
+            email: '',
+            password: '',
+            module: '',
+        });
     };
     return {
         formData,
